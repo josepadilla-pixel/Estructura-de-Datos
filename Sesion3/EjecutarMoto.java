@@ -28,7 +28,7 @@ public class EjecutarMoto {
        }
        System.out.println("las motos que puedo comprar con 20000.0us son: "+cad);
 
-
+      
 
 
     }
