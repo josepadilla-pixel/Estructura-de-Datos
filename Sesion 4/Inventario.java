@@ -1,14 +1,22 @@
 
-
 public class Inventario {
 
     private Producto[] productos;
-    private int contador;
+    private int contador = 0;
 
-    public Inventario(int capacidad) {
-        productos = new Producto[capacidad];
-        contador = 0;
+    public Inventario(Producto[] productos) {
+        this.productos = productos;
+    }
+
+    public Producto[] getProductos() {
+        return productos;
+    }
+
+    public void setProductos(Producto[] productos) {
+        this.productos = productos;
     } 
+
+    
 
     public void agregarProducto(Producto p) {
         if (contador < productos.length) {
@@ -24,6 +32,7 @@ public class Inventario {
                 return productos[i];
             }
         }
+        System.out.println("No se encontró el producto");
         return null;
     }
 
@@ -68,4 +77,21 @@ public class Inventario {
 
         return agotados;
     }
+
+    public void ordenarPorPrecioDescendente() {
+
+        for (int i = 0; i < contador - 1; i++) {
+
+            for (int j = 0; j < contador - 1 - i; j++) {
+
+                if (productos[j].getPrecio() < productos[j + 1].getPrecio()) {
+
+                    Producto temp = productos[j];
+                    productos[j] = productos[j + 1];
+                    productos[j + 1] = temp;
+                }
+            }
+        }
+    }
+
 }
