@@ -7,7 +7,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Muelle muelle = new Muelle();
+        Muelle muelle1 = new Muelle();
         Random r = new Random();
         Scanner sc = new Scanner(System.in);
 
@@ -19,7 +19,7 @@ public class Principal {
         for (int i = 0; i < 10; i++) {
             String nombre = nombresBuques[r.nextInt(nombresBuques.length)] + " " + (i + 1);
             int id = 1000 + i;
-            muelle.registrarBuque(new Buque(nombre, id));
+            muelle1.registrarBuque(new Buque(nombre, id));
         }
 
         // 2. Cargar Contenedores
@@ -32,7 +32,7 @@ public class Principal {
 
                 Contenedor nuevoCont = new Contenedor(idCont, origen, peso);
 
-                muelle.registrarContenedor(nuevoCont, col);
+                muelle1.registrarContenedor(nuevoCont, col);
             }
         }
 
@@ -58,23 +58,23 @@ public class Principal {
             switch (opcion) {
 
                 case 1:
-                    muelle.mostrarBuques();
+                    muelle1.mostrarBuques();
                     break;
 
                 case 2:
-                    muelle.mostrarContenedores();
+                    muelle1.mostrarContenedores();
                     break;
 
                 case 3:
-                    System.out.println("Peso total: " + muelle.calcularPesoTotal());
+                    System.out.println("Peso total: " + muelle1.calcularPesoTotal());
                     break;
 
                 case 4:
-                    muelle.mostrarMatriz();
+                    muelle1.mostrarMatriz();
                     break;
 
                 case 5:
-                    muelle.listarOrigenes();
+                    muelle1.listarOrigenes();
                     break;
 
                 case 6:
