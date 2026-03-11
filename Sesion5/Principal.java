@@ -11,7 +11,7 @@ public class Principal {
         Random r = new Random();
         Scanner sc = new Scanner(System.in);
 
-        // Datos para aleatoriedad
+        // arreglo de datos
         String[] nombresBuques = {"Evergreen", "Maersk", "MSC", "Cosco", "Hapag-Lloyd", "ONE", "CMA CGM", "HMM", "Zim", "Yang Ming"};
         String[] paisesOrigen = {"China", "Mexico", "USA", "Alemania", "Japón", "Brasil", "España"};
 
