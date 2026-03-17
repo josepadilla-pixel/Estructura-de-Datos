@@ -13,7 +13,7 @@ public class Principal {
 
         // arreglo de datos
         String[] nombresBuques = {"Evergreen", "Maersk", "MSC", "Cosco", "Hapag-Lloyd", "ONE", "CMA CGM", "HMM", "Zim", "Yang Ming"};
-        String[] paisesOrigen = {"China", "Mexico", "USA", "Alemania", "Japón", "Brasil", "España"};
+        String[] paisesOrigen = {"China", "Mexico", "USA", "Alemania", "Japón", "Brasil", "España,"};
 
         // 1. Cargar Buques
         for (int i = 0; i < 10; i++) {
